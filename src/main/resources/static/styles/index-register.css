@@ -9,20 +9,31 @@
     height: 100%;
 }
 
-.login-box {
+.login-box,
+.register-box {
     width: 50%;
     padding: 30px;
-    background-color: gray;
+    background-color: lightgray;
+}
+
+.login-box h2,
+.register-box h2 {
+    font-size: 15px;
 }
 
 .username-box,
-.password-box{
+.password-box {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.input-box{
+.input-box {
     flex-grow: 1;
-    /*width: 90%;*/
+}
+
+.login-box h1,
+.register-box h1 {
+    font-family: Arial;
+    font-size: 25px;
 }
