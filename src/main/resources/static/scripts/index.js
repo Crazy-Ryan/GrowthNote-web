@@ -15,6 +15,9 @@ function validateUserCredential(username, password) {
         success: function (responseText) {
             console.log(responseText);
             inputCorrect = isCorrect(responseText);
+            if(inputCorrect){
+                window.location.href="user-list.html";
+            }
         },
         fail: function (error) {
             console.log('get data error');
