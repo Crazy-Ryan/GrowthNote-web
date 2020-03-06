@@ -22,4 +22,9 @@ public class UserRepository implements UserRepositoryI {
         users.add(user);
         return user;
     }
+
+    @Override
+    public List<User> getUsers() {
+        return users;
+    }
 }

@@ -33,8 +33,7 @@ public class UserController {
 
     @GetMapping("all")
     public ResponseEntity<List<User>> getUsers() {
-//        String str = "fetch correctly"
-        List<User> UserList = Arrays.asList(new User(), new User());
+        List<User> UserList = userService.getUsers();
         return ResponseEntity.ok(UserList);
     }
 }
