@@ -15,6 +15,7 @@ function registerWithCredential(username, password) {
         },
         success: function (responseText) {
             console.log(responseText);
+            alert("注册成功");
         },
         fail: function (error) {
             console.log('get data error');

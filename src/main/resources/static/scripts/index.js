@@ -16,8 +16,11 @@ function validateUserCredential(username, password) {
             console.log(responseText);
             inputCorrect = isCorrect(responseText);
             if(inputCorrect){
+                alert("登录成功");
                 window.location.href="user-list.html";
             }
+            else {
+                alert("登录失败");            }
         },
         fail: function (error) {
             console.log('get data error');

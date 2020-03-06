@@ -11,7 +11,7 @@
 
 .login-box,
 .register-box {
-    width: 50%;
+    width: 30%;
     padding: 30px;
     background-color: lightgray;
 }
@@ -25,15 +25,39 @@
 .password-box {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    margin: 20px;
+    border: 1px solid grey;
+}
+
+.username-box div:first-child,
+.password-box div:first-child {
+    width: 80px;
+    text-align: center;
+    padding: 10px;
 }
 
 .input-box {
     flex-grow: 1;
+    padding: 10px;
+    background-color: white;
 }
 
 .login-box h1,
 .register-box h1 {
     font-family: Arial;
     font-size: 25px;
+}
+
+.submit-btn {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+input{
+    border: none;
+    height: 100%;
 }
