@@ -10,6 +10,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.List;
 
 @Controller
 @RequestMapping("/api/users")
@@ -26,5 +29,12 @@ public class UserController {
     public ResponseEntity<User> userRegister(@RequestBody User user) {
         User userResult = userService.userRegister(user.getName(), user.getPassword());
         return ResponseEntity.ok(userResult);
+    }
+
+    @GetMapping("all")
+    public ResponseEntity<List<User>> getUsers() {
+//        String str = "fetch correctly"
+        List<User> UserList = Arrays.asList(new User(), new User());
+        return ResponseEntity.ok(UserList);
     }
 }
