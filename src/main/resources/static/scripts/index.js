@@ -7,5 +7,5 @@ function onSubmitClick() {
     usernameInput = usernameEl.value;
     passwordInput = passwordEl.value;
 
-
 }
+
