@@ -5,6 +5,8 @@ import com.thoughtworks.repositories.UserRepository;
 import com.thoughtworks.repositories.UserRepositoryI;
 import org.springframework.util.DigestUtils;
 
+import java.util.List;
+
 public class UserService implements UserServiceI {
     private UserRepositoryI userRepository = new UserRepository();
 
@@ -16,5 +18,10 @@ public class UserService implements UserServiceI {
     public void userRegister(String userName, String password) {
         String passwordMd5 = DigestUtils.md5DigestAsHex(password.getBytes());
         userRepository.userRegister(new User(userName, passwordMd5));
+    }
+
+    @Override
+    public List<User> getUsers() {
+        return userRepository.getUsers();
     }
 }

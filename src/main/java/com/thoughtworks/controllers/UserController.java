@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import java.util.List;
 
 @Controller
 @RequestMapping("/api/users")
@@ -27,4 +28,11 @@ public class UserController {
         userService.userRegister(user.getUserName(), user.getPassword());
         return ResponseEntity.ok(user);
     }
+
+    @GetMapping("all")
+    public ResponseEntity<List<User>> getUsers() {
+        List<User> UserList = userService.getUsers();
+        return ResponseEntity.ok(UserList);
+    }
+
 }

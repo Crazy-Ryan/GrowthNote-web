@@ -1,41 +1,48 @@
 <!DOCTYPE html>
-<html lang="UTF-8">
+<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>登录页面</title>
-    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="static/index.css" rel="stylesheet"/>
-    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/index-register.css"/>
+
 </head>
 <body>
-<form id="form" class="login well">
-    <h3>用户登录</h3>
-    <div class="input-group input-group-md">
-              <span class="input-group-addon" id="sizing-addon1">
-                  <i class="glyphicon glyphicon-user" aria-hidden="true"></i>
-              </span>
-        <input id="name"
-               type="text"
-               class="form-control"
-               placeholder="用户名"
-               aria-describedby="sizing-addon1"/>
+<div class="content-box">
+    <div class="login-box">
+        <h1>用户登录</h1>
+        <form>
+            <div class="username-box">
+                <div>
+                    用户名
+                </div>
+                <div class="input-box">
+                    <label>
+                        <input type="text" class="username-input"/>
+                    </label>
+                </div>
+            </div>
+            <div class="password-box">
+                <div>
+                    密码
+                </div>
+                <div class="input-box">
+                    <label>
+                        <input type="password" class="password-input"/>
+                    </label>
+                </div>
+            </div>
+            <div class="submit-btn" onclick="onSubmitClick()">
+                登录
+            </div>
+        </form>
+        <a href="register.html">
+            <h2>还没有账户？前往注册</h2>
+        </a>
     </div>
-    <div class="input-group input-group-md">
-              <span class="input-group-addon" id="sizing-addon2">
-                  <i class="glyphicon glyphicon-lock"></i>
-              </span>
-        <input type="password"
-               id="password"
-               class="form-control"
-               placeholder="密码"
-               aria-describedby="sizing-addon2"/>
-    </div>
-    <button type="button" class="btn btn-success btn-block">登录</button>
-    <a class="btn-sm btn-white btn-block" href="register.html">
-        <h6>还没有账户？前往注册</h6>
-    </a>
-</form>
+
+</div>
+
 </body>
-<script src="static/index.js"></script>
+<script src="./scripts/ajax.js"></script>
+<script src="./scripts/index.js"></script>
 </html>
